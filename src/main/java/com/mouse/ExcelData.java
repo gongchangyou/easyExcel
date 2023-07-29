@@ -1,25 +1,30 @@
 package com.mouse;
 
 import com.alibaba.excel.annotation.ExcelProperty;
+import com.alibaba.excel.converters.localdatetime.LocalDateTimeDateConverter;
+import com.alibaba.excel.converters.localdatetime.LocalDateTimeNumberConverter;
+import com.alibaba.excel.converters.localdatetime.LocalDateTimeStringConverter;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Data
 public class ExcelData {
-    @ExcelProperty(index = 0,value = "A")
+    @ExcelProperty("A")
     private int a;
 
-    @ExcelProperty(index = 1, value = "B")
+    @ExcelProperty("B")
     private String chineseWord;
 
-    @ExcelProperty(index = 2, value = "C")
+    @ExcelProperty("C")
     private double c;
 
-    @ExcelProperty(index = 3, value = "D")
+    @ExcelProperty("D")
     private String englishWord;
 
-    @ExcelProperty(index = 4, value = "时间")
-    private String time;
+    @ExcelProperty( value = "时间", converter = LocalDateTimeNumberConverter.class)
+    private LocalDateTime time;
 }
