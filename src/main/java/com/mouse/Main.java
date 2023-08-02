@@ -1,12 +1,7 @@
 package com.mouse;
 
-import com.alibaba.excel.EasyExcel;
-import com.alibaba.excel.context.AnalysisContext;
-import com.alibaba.excel.metadata.CellExtra;
-import com.alibaba.excel.metadata.data.ReadCellData;
-import com.alibaba.excel.read.listener.ReadListener;
+import com.mouse.utils.ExcelUtils;
 
-import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
@@ -18,5 +13,11 @@ public class Main {
 
         List<ExcelData> list = ExcelUtils.getListFromResourceFile("test.xlsx", ExcelData.class);
         System.out.println(list);
+
+        Map<String, ExcelData> map = ExcelUtils.getMapFromResourceFile("test.xlsx", ExcelData.class, true);
+        System.out.println(map);
+
+        Map<String, ExcelData> map1 = ExcelUtils.getMapFromResourceFile("test.xlsx", ExcelData.class, false);
+        System.out.println(map1);
     }
 }
