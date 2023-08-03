@@ -7,12 +7,12 @@
 如果设置成false，那么当键值冲突时，会抛异常。
 
 ```
-        List<ExcelData> list = ExcelUtils.getListFromResourceFile("test.xlsx", ExcelData.class);
-        System.out.println(list);
+List<ExcelData> list = ExcelUtils.getListFromResourceFile("test.xlsx", ExcelData.class);
+System.out.println(list);
 
-        Map<String, ExcelData> map = ExcelUtils.getMapFromResourceFile("test.xlsx", ExcelData.class, true);
-        System.out.println(map);
+Map<String, ExcelData> map = ExcelUtils.getMapFromResourceFile("test.xlsx", ExcelData.class, true);
+System.out.println(map);
 
-        Map<String, ExcelData> map1 = ExcelUtils.getMapFromResourceFile("test.xlsx", ExcelData.class, false);
-        System.out.println(map1);
+Map<String, ExcelData> map1 = ExcelUtils.getMapFromResourceFile("test.xlsx", ExcelData.class, false);
+System.out.println(map1);
 ```
