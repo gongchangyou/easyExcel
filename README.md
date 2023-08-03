@@ -34,6 +34,8 @@ private int a;
 ```
 
 其中 getMapFromResourceFile 第三个参数是 是否覆盖。
+
 如果设置成true，相同key的值会被覆盖。
+
 如果设置成false，那么当键值冲突时，会抛异常。
 
